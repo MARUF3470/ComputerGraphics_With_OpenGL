@@ -1,33 +1,33 @@
 # ComputerGraphics_With_OpenGL
 
 <h3>Full Code</h3>
-#include<windows.h>
-#include <GL/glut.h>
-#include <cmath>
-#define FILL true
-#define NOT_FILL false
 
-float xPos = 0.0f;
-float yPos = 0.0f;
-float angle = 0.0f;
-float a=0.301;
-float b=0.741;
-float c=0.952;
-float d=1.0;
-float e=1.0;
-float f=0.0;
-float p=1.0;
-float l=1.0;
-float m=1.0;
-float o=1.0;
-float k=0.0;
-float n=1.0;
+    #include<windows.h>
+    #include <GL/glut.h>
+    #include <cmath>
+    #define FILL true
+    #define NOT_FILL false
+
+    float xPos = 0.0f;
+    float yPos = 0.0f;
+    float angle = 0.0f;
+    float a=0.301;
+    float b=0.741;
+    float c=0.952;
+    float d=1.0;
+    float e=1.0;
+    float f=0.0;
+    float p=1.0;
+    float l=1.0;
+    float m=1.0;
+    float o=1.0;
+    float k=0.0;
+    float n=1.0;
 
 //cicle formula & condition
-<br/>
-void makeCircle(float r, double x_center, double y_center,bool isFill)
-<br/>
-{
+
+    void makeCircle(float r, double x_center, double y_center,bool isFill)
+    {
     float deg = 0;
     double theta, x, y;
 
@@ -54,10 +54,10 @@ void makeCircle(float r, double x_center, double y_center,bool isFill)
         deg+=1;
     }
     glEnd();
-}
+    }
 
-void display()
-{
+    void display()
+    {
     glClear(GL_COLOR_BUFFER_BIT);
 
     //Road
@@ -784,16 +784,15 @@ void display()
 
 
     glutSwapBuffers();
-}
+    }
 
 
 
 
 
-<br/>
-void update(int value)
-<br/>
-{
+
+    void update(int value)
+    {
     xPos += 0.01f;
 
     if (xPos>1)
@@ -803,12 +802,11 @@ void update(int value)
 
     glutPostRedisplay();
     glutTimerFunc(100, update, 0);
-}
+    }
 
-<br/>
-int main(int argc, char **argv)
-<br/>
-{
+
+    int main(int argc, char **argv)
+    {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
     glutInitWindowSize(600, 600);
@@ -822,4 +820,4 @@ int main(int argc, char **argv)
     glutTimerFunc(100, update, 0);
     glutMainLoop();
     return 0;
-}
+    }
