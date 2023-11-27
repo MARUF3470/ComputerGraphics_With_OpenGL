@@ -26,6 +26,7 @@ float n=1.0;
 //cicle formula & condition
 <br/>
 void makeCircle(float r, double x_center, double y_center,bool isFill)
+<br/>
 {
     float deg = 0;
     double theta, x, y;
@@ -789,8 +790,9 @@ void display()
 
 
 
-
+<br/>
 void update(int value)
+<br/>
 {
     xPos += 0.01f;
 
@@ -803,8 +805,9 @@ void update(int value)
     glutTimerFunc(100, update, 0);
 }
 
-
+<br/>
 int main(int argc, char **argv)
+<br/>
 {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
